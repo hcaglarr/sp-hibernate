@@ -18,7 +18,10 @@
 
     <packaging>pom</packaging>
 
-    <modules></modules>
+    <modules>
+        <module>implicit-aming-strategy</module>
+    </modules>
+
     <properties>
         <revision>0.0.1-SNAPSHOT</revision>
         <java.version>11</java.version>

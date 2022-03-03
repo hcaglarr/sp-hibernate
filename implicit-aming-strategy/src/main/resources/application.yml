@@ -1,0 +1,16 @@
+server:
+  port: 8383
+  http2:
+    enabled: true
+spring:
+  datasource:
+    username: sa
+    url: jdbc:h2:mem:testdb
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
