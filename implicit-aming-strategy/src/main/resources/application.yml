@@ -5,12 +5,24 @@ server:
 spring:
   datasource:
     username: sa
-    url: jdbc:h2:mem:testdb
+    url: jdbc:h2:tcp://localhost/~/test
   h2:
     console:
       enabled: true
   jpa:
     hibernate:
       ddl-auto: create-drop
+      naming:
+        implicit-strategy: com.hcaglar.implicitamingstrategy.utilty.CustomImplicitNamingStrategy
     database-platform: org.hibernate.dialect.H2Dialect
     show-sql: true
+exception:
+  user:
+    not-found: The searched user was not found.
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /api-docs
+
+
